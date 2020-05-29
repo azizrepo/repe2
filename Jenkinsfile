@@ -24,7 +24,9 @@ pipeline {
             steps {
                 echo 'hello wolrd'
                 withMaven(maven:'maven'){
-                bat 'mvn deploy'
+             //   bat 'mvn deploy'
+                 bat 'mvn install'
+               
                 }
             }
         
