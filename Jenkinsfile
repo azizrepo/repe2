@@ -5,7 +5,7 @@ pipeline {
             steps {
                 echo 'hello wolrd'
                 withMaven(maven:'maven'){
-                sh 'mvn clean compile'
+                bat 'mvn clean compile'
                 }
             }
         
@@ -14,7 +14,7 @@ pipeline {
             steps {
                 echo 'hello wolrd'
                 withMaven(maven:'maven'){
-                sh 'mvn test'
+                bat 'mvn test'
                 }
             }
         
@@ -24,7 +24,7 @@ pipeline {
             steps {
                 echo 'hello wolrd'
                 withMaven(maven:'maven'){
-                sh 'mvn deploy'
+                bat 'mvn deploy'
                 }
             }
         
