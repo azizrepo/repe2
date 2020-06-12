@@ -1,6 +1,7 @@
 pipeline {
     agent any
     stages {
+        /*
         stage('Compile Stage') {
             steps {
                 echo 'hello wolrd'
@@ -19,7 +20,7 @@ pipeline {
             }
         
         }
-        
+        */
         stage('Deployment Stage') {
             steps {
                 echo 'hello wolrd'
@@ -35,7 +36,7 @@ pipeline {
         stage('Push Container'){
   steps{
 echo "workspace is $WORKSPACE"
-dir("$WORKSPACE/repe"){
+dir("$WORKSPACE\repe"){
 
 script{
 docker.withRegistry('https://index.docker.io/v1','dockerhub')
