@@ -39,7 +39,7 @@ echo "workspace is $WORKSPACE"
 dir("$WORKSPACE\repe"){
 
 script{
-docker.withRegistry('https://index.docker.io/v1','dockerhub')
+docker.withDockerRegistry('https://index.docker.io/v1','dockerhub')
 def image=docker.build('aziznoori/alzap-store')
 image.push()
 }
