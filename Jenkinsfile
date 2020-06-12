@@ -47,7 +47,7 @@ image.push()
 }
 }
 }
-}
+
         
          stage('good bye') {
             steps {
