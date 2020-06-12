@@ -43,6 +43,7 @@ script{
     withDockerRegistry(registry: [url: 'https://index.docker.io/v1/', credentialsId:'dockerhub']) {
 def image=docker.build('aziznoori/alzap-store')
 image.push()
+    }
 }
 }
 }
