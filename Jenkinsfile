@@ -32,6 +32,20 @@ pipeline {
         
         }
         
+        stage('Push Container'){
+  steps{
+echo "workspace is $WORKSPACE"
+dir("$WORKSPACE/repe"){
+
+script{
+docker.withRegistry('https://index.docker.io/v1','dockerhub')
+def image=docker.build('aziznoori/alzap-store')
+image.push()
+}
+}
+}
+}
+        
          stage('good bye') {
             steps {
                 echo 'good bye'
