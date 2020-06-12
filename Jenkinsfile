@@ -36,7 +36,7 @@ pipeline {
         stage('Push Container'){
   steps{
 echo "workspace is $WORKSPACE"
-dir("$WORKSPACE\repe"){
+//dir("$WORKSPACE\repe"){
 
 script{
 //docker.withDockerRegistry('https://index.docker.io/v1','dockerhub')
